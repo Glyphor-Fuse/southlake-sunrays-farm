@@ -1,34 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
-
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SunnyHero } from "@/components/SunnyHero";
+import { CritterCrew } from "@/components/CritterCrew";
+import { TicketBarn } from "@/components/TicketBarn";
+import { FarmLocation } from "@/components/FarmLocation";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-background p-4">
-      {/* This is a placeholder page. 
-        It demonstrates how to use "shadcn-ui" components and Tailwind CSS.
-        The AI interprets these imports as available UI primitives.
-      */}
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle className="text-center">Welcome to Your Project</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="text-center text-muted-foreground">
-            Start building your application by editing <code className="bg-muted px-1 rounded">src/pages/Index.tsx</code>
-          </p>
-          
-          <div className="space-y-2">
-            <Input placeholder="Enter your project name..." />
-            <Button className="w-full">
-              Create Something Amazing
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+    <main className="min-h-screen bg-cream-50 font-nunito selection:bg-sunray-300">
+      <SunnyHero />
+      <CritterCrew />
+      <TicketBarn />
+      <FarmLocation />
+      
+      {/* Simple Footer */}
+      <footer className="bg-pasture-950 text-pasture-200 py-8 text-center text-sm font-nunito">
+        <p>© {new Date().getFullYear()} Southlake Sunrays Farm. All rights reserved.</p>
+        <p className="mt-2 text-pasture-400">Designed with sunshine and love.</p>
+      </footer>
+    </main>
   );
 };
 
